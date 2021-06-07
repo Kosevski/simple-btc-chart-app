@@ -112,7 +112,7 @@ class MainActivity : AppCompatActivity() {
         for (i in 0 until it.values!!.size) {
             Log.d("makeChart", "onResponse: date " + it.values!![i].x!!)
             Log.d("makeChart", "onResponse: price " + it.values!![i].y)
-            val date =  Date(java.lang.System.currentTimeMillis() - it.values!![i].x!!).toString()
+            val date =  Date( it.values!![i].x!!*1000).toString()
 
             seriesData.add(
                 CustomDataEntry(
